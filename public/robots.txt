@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://trabajos-ofrecidos.vercel.app/sitemap.xml
+
+# Crawl-delay para bots
+Crawl-delay: 1
+
+# Permitir todos los recursos principales
+Allow: /servicios
+Allow: /profesionales
+Allow: /como-funciona
+Allow: /contacto
+
+# Disallow páginas privadas (futuras)
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/private/
+
+# Disallow archivos temporales
+Disallow: /*.tmp$
+Disallow: /*.log$

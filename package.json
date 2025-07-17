@@ -1,0 +1,60 @@
+{
+  "name": "trabajos-ofrecidos",
+  "version": "2.0.0",
+  "description": "Trabajos Ofrecidos - Plataforma Completa de Servicios Profesionales con IA",
+  "homepage": "https://trabajos-ofrecidos.vercel.app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite",
+    "setup": "npm install && echo 'Dependencias instaladas. Ejecuta: npm run dev'",
+    "db:setup": "echo 'Configurando base de datos...'",
+    "deploy": "vite build && vercel --prod"
+  },
+  "keywords": [
+    "servicios",
+    "profesionales",
+    "trabajos",
+    "oficios",
+    "gomero",
+    "plomeria",
+    "electricidad",
+    "inteligencia-artificial",
+    "plataforma",
+    "matching",
+    "gps",
+    "realtime",
+    "supabase",
+    "database",
+    "argentina"
+  ],
+  "author": "Trabajos Ofrecidos Team",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1",
+    "@supabase/supabase-js": "^2.39.0",
+    "react-router-dom": "^6.8.0",
+    "framer-motion": "^10.16.0",
+    "react-hot-toast": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/trabajos-ofrecidos.git"
+  }
+}

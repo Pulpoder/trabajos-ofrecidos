@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Trabajos Ofrecidos - Encuentra Profesionales Confiables en Argentina</title>
+    <meta name="description" content="Conecta con profesionales verificados para todos tus trabajos: gomero, plomería, electricidad, carpintería y más. Servicio 24/7 en toda Argentina." />
+    <meta name="keywords" content="trabajos, oficios, gomero, plomero, electricista, profesionales, Argentina, Villa Dolores, Córdoba, servicios, emergencia" />
+    <meta name="author" content="Trabajos Ofrecidos" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trabajos Ofrecidos - Profesionales Confiables" />
+    <meta property="og:description" content="Encuentra profesionales verificados para cualquier trabajo. Desde gomero hasta electricista, conectamos tu necesidad con expertos en toda Argentina." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://trabajos-ofrecidos.vercel.app" />
+    <meta property="og:site_name" content="Trabajos Ofrecidos" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Trabajos Ofrecidos - Profesionales Confiables" />
+    <meta name="twitter:description" content="Conecta con profesionales verificados para todos tus trabajos en Argentina." />
+    <meta name="twitter:image" content="/twitter-image.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://trabajos-ofrecidos.vercel.app" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Trabajos Ofrecidos",
+      "description": "Plataforma para conectar con profesionales verificados en Argentina",
+      "url": "https://trabajos-ofrecidos.vercel.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://trabajos-ofrecidos.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Argentina"
+      },
+      "serviceType": [
+        "Gomería",
+        "Plomería", 
+        "Electricidad",
+        "Carpintería",
+        "Pintura",
+        "Limpieza",
+        "Jardinería",
+        "Cerrajería"
+      ]
+    }
+    </script>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    
+    <!-- Analytics (opcional) -->
+    <!-- Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+    
+    <!-- Critical CSS Inline (para mejor performance) -->
+    <style>
+      /* Critical CSS inline para primera carga */
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9fafb;
+        color: #1f2937;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Loading spinner */
+      .loading-spinner {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #2563eb;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Fallback loading screen */
+      .app-loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
+        color: white;
+      }
+      
+      .app-loading h1 {
+        margin: 20px 0 10px 0;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      
+      .app-loading p {
+        margin: 0;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fallback para navegadores sin JavaScript -->
+    <noscript>
+      <div style="padding: 20px; text-align: center; background: #fee2e2; color: #991b1b; border: 1px solid #fecaca;">
+        <h2>🚨 JavaScript Requerido</h2>
+        <p>Esta aplicación requiere JavaScript para funcionar correctamente.</p>
+        <p>Por favor, habilita JavaScript en tu navegador e intenta nuevamente.</p>
+      </div>
+    </noscript>
+    
+    <!-- Loading screen mientras carga React -->
+    <div id="loading-screen" class="app-loading">
+      <div class="loading-spinner"></div>
+      <h1>🔧 Trabajos Ofrecidos</h1>
+      <p>Cargando profesionales confiables...</p>
+    </div>
+    
+    <!-- Main App Container -->
+    <div id="root"></div>
+    
+    <!-- Scripts -->
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Remove loading screen once React loads -->
+    <script>
+      // Remover pantalla de carga una vez que React esté listo
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen && document.getElementById('root').children.length > 0) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(() => loadingScreen.remove(), 500);
+          }
+        }, 100);
+      });
+      
+      // Service Worker para PWA (futuro)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registrado con éxito:', registration.scope);
+            })
+            .catch(function(error) {
+              console.log('SW falló al registrarse:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
