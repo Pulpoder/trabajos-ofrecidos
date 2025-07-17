@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Search, Phone, Mail, MapPin, Star, Menu, X, Smartphone, CheckCircle } from 'lucide-react';
-import DynamicServices from './components/DynamicServices';
-import DynamicStats from './components/DynamicStats';
-import BookingModal from './components/BookingModal';
+import DynamicServices from './components/DynamicServices.jsx';
+import DynamicStats from './components/DynamicStats.jsx';
+import BookingModal from './components/BookingModal.jsx';
 
 function App() {
   const [selectedService, setSelectedService] = useState(null);
